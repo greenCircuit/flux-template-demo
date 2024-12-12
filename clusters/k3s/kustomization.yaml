@@ -5,8 +5,5 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m
-  sourceRef:
-    kind: GitRepository
-    name: podinfo
-  path: "./resources"
-  timeout: 1m
+resources:
+  - ./resources
