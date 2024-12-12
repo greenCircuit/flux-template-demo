@@ -6,3 +6,7 @@ testFramework:
     enabled: true
   testService:
     enabled: true
+
+observability:
+  enabled: true
+
