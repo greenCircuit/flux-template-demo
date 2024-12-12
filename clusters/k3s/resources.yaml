@@ -7,7 +7,7 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: ./clusters/k3s/resources
+      chart: ./clusters/k3s/infra
       sourceRef:
         kind: GitRepository
         namespace: flux-system
