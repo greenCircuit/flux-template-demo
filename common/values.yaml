@@ -1,0 +1,6 @@
+# common values that all clusters will have 
+# used so dont repeat values inside main.yaml
+clusterGlobal:
+  dnsHost: 8.8.8.8    # will use this ip for dns in all clusters
+  logLevel: INFO      # defaulting to INFO log level
+  ingress: istio      # defaulting to istio as ingress

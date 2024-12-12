@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: common-values
+  namespace: flux-system
+data:  
+  {{- .Values.clusterGlobal | toYaml | nindent 2 }}

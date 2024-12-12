@@ -1,0 +1,8 @@
+global: {}
+
+# values for individual service that been deployed 
+performanceTracker: 
+  enabled: true
+
+testService:
+  enabled: true
