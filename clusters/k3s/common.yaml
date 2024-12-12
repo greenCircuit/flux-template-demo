@@ -7,9 +7,9 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: ./common/
+      chart: common
       sourceRef:
         kind: GitRepository
         namespace: flux-system
-        name: common-resources
+        name: ./common
       interval: 10m
