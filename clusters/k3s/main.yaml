@@ -16,7 +16,7 @@ spec:
       interval: 10m
   # importing common values
   valuesFrom:
-   - kind: configMap
+   - kind: ConfigMap
      name: common-values
   # providing cluster specific values
   values:
