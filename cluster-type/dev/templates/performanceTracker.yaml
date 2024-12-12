@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testPerformance 
+  name: test-performance 
   namespace: flux-system 
   labels:
     app: nginx
