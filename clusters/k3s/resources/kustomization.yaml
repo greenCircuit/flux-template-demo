@@ -4,5 +4,5 @@ metadata:
   name: resources
   namespace: flux-system
 resources:
-  - ./resources/common.yaml
+  - ./common.yaml
   # - ./resources/main.yaml
