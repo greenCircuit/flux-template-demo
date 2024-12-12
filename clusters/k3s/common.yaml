@@ -1,15 +1,15 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: podinfo
+  name: common-resources
   namespace: flux-system
 spec:
   interval: 10m
   chart:
     spec:
-      chart: common
+      chart: ./common
       sourceRef:
         kind: GitRepository
         namespace: flux-system
-        name: ./common
+        name: flux-system
       interval: 10m
