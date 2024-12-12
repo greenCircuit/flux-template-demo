@@ -18,7 +18,6 @@ spec:
   valuesFrom:
    - kind: ConfigMap
      name: common-values
-           common-values
   # providing cluster specific values
   values:
     cluster:
