@@ -1,8 +1,8 @@
 global: {}
 
 testFramework:
+  enabled: true
   performanceTracker: 
     enabled: true
-    
   testService:
     enabled: true
