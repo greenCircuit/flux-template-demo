@@ -1,22 +1,23 @@
-# helm release that 
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: cluster-definition
   namespace: flux-system
 spec:
-  interval: 1m
+  interval: 10m
   chart:
     spec:
-      chart: ./services/integration-testing
+      chart: ./services/
       sourceRef:
         kind: GitRepository
         namespace: flux-system
         name: flux-system
       interval: 10m
+  # importing common values
   valuesFrom:
-   - kind: ConfigMap
+   - kind: configMap
      name: common-values
+  # providing cluster specific values
   values:
     cluster:
       controlNodeIp: 192.10.10.10
