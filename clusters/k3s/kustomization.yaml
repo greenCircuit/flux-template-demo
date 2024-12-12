@@ -8,5 +8,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: podinfo
-  path: "./kustomize"
+  path: "./resources"
   timeout: 1m
