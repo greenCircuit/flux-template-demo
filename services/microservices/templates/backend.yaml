@@ -1,8 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    "helm.sh/hook": pre-install,pre-upgrade
   name: back-end-service
   namespace: backend 
   labels:
@@ -13,13 +11,12 @@ spec:
   replicas: {{ .Values.backEnd.replicas }}
   selector:
     matchLabels:
-      app: nginx
+      name: back-end-service
   template:
     metadata:
       labels:
-        app: nginx
-      annotations:
-        "helm.sh/hook": pre-install,pre-upgrade
+        name: back-end-service
+  template:
     spec:
       containers:
       - name: nginx

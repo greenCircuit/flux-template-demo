@@ -2,8 +2,12 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: frontend 
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: backend 
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade
