@@ -3,10 +3,14 @@ kind: Deployment
 metadata:
   name: back-end-service
   namespace: backend 
+  annotations:
+    # This is what defines this resource as a hook. Without this line, the
+    # job is considered part of the release.
+    "helm.sh/hook": post-install
   labels:
     app: back-end-service
     clusterName: {{ .Values.cluster.name | default "no-cluster-name"}}
-    region: {{ .Values.cluster.region | default "US-WEST"}}
+    region: {{ .Values.cluster.region | default "US-CENTRAL"}}
 spec:
   replicas: {{ .Values.backEnd.replicas }}
   selector:
