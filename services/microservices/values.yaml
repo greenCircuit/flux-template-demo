@@ -10,3 +10,11 @@ frontEnd:
   
 backEnd:
   enabled: true
+
+postgres:
+  nameOverride: "my-postgres"
+  global:
+    postgresql:
+      auth:
+        username: admin 
+        password: database
