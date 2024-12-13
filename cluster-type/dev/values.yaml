@@ -10,9 +10,8 @@ testFramework:
     enabled: true
   testService:
     enabled: true
-    
+
 microservices:
-  enabled: true
   frontEnd:
     enabled: true
     replicas: 1

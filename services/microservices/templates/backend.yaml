@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
   name: back-end-service
   namespace: backend 
   labels:
@@ -16,6 +18,8 @@ spec:
     metadata:
       labels:
         app: nginx
+      annotations:
+        "helm.sh/hook": post-install,post-upgrade
     spec:
       containers:
       - name: nginx
