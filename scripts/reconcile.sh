@@ -7,3 +7,7 @@ flux resume ks flux-system -n flux-system
 flux reconcile hr cluster-definition -n flux-system
 flux suspend hr cluster-definition -n flux-system
 flux resume hr cluster-definition -n flux-system
+
+flux reconcile hr microservices -definition -n flux-system
+flux suspend hr microservices -n flux-system
+flux resume hr microservices -n flux-system

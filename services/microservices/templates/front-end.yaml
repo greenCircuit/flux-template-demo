@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: front-end-service 
-  namespace: front-end 
+  namespace: frontend 
   labels:
     app: nginx
 spec:
