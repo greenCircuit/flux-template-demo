@@ -4,7 +4,7 @@ metadata:
   name: back-end-service
   namespace: backend 
   labels:
-    app: testingFramework
+    app: back-end-service
     clusterName: {{ .Values.cluster.name | default "no-cluster-name"}}
     region: {{ .Values.cluster.region | default "US-WEST"}}
 spec:
