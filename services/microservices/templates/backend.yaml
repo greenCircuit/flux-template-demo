@@ -8,7 +8,7 @@ metadata:
     clusterName: {{ .Values.cluster.name | default "no-cluster-name"}}
     region: {{ .Values.cluster.region | default "US-CENTRAL"}}
 spec:
-  replicas: {{ .Values.microservices.backEnd.replicas | default "3" }}
+  replicas: {{ .Values.microservices.backEnd.replicas }}
   selector:
     matchLabels:
       app: back-end-service
