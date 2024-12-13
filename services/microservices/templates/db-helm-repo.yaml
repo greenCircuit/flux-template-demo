@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: postgres
+  namespace: backend 
+spec:
+  interval: 5m0s
+  url: oci://registry-1.docker.io/bitnamicharts/postgresql
