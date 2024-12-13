@@ -3,7 +3,7 @@ kind: HelmRelease
 metadata:
   name: microservices
 spec:
-  interval: 1m
+  interval: 20s
   chart:
     spec:
       chart: ./services/microservices                        
@@ -11,9 +11,17 @@ spec:
         kind: GitRepository
         namespace: flux-system
         name: flux-system
-      interval: 1m
+      interval: 20s
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+      
   driftDetection:
     mode: enabled
+
   values:
     microservices:
       {{- .Values.microservices| toYaml | nindent 8 }}

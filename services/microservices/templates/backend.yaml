@@ -4,18 +4,18 @@ metadata:
   name: back-end-service
   namespace: backend 
   labels:
-    name: back-end-service
+    app: back-end-service
     clusterName: {{ .Values.cluster.name | default "no-cluster-name"}}
     region: {{ .Values.cluster.region | default "US-CENTRAL"}}
 spec:
-  replicas: {{ .Values.backEnd.replicas | default "3" }}
+  replicas: {{ .Values.microservices.backEnd.replicas | default "3" }}
   selector:
     matchLabels:
-      name: back-end-service
+      app: back-end-service
   template:
     metadata:
       labels:
-        name: back-end-service
+        app: back-end-service
     spec:
       containers:
       - name: nginx

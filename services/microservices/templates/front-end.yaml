@@ -8,7 +8,7 @@ metadata:
     clusterName: {{ .Values.cluster.name | default "no-cluster-name"}}
     region: {{ .Values.cluster.region | default "US-CENTRAL"}}
 spec:
-  replicas: {{ .Values.frontEnd.replicas }}
+  replicas: {{ .Values.microservices.frontEnd.replicas | default "3" }}
   selector:
     matchLabels:
       app: nginx
