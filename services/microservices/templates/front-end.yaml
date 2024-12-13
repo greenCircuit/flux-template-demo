@@ -5,8 +5,10 @@ metadata:
   namespace: frontend 
   labels:
     app: nginx
+    clusterName: {{ .Values.cluster.name | default "no-cluster-name"}}
+    region: {{ .Values.cluster.region | default "US-CENTRAL"}}
 spec:
-  replicas: 1
+  replicas: {{ .Values.frontEnd.replicas }}
   selector:
     matchLabels:
       app: nginx

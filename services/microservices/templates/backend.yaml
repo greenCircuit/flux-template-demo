@@ -16,7 +16,6 @@ spec:
     metadata:
       labels:
         name: back-end-service
-  template:
     spec:
       containers:
       - name: nginx
