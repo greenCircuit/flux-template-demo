@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: back-end-service
   namespace: backend 
-  annotations:
-    "helm.sh/hook": post-install,post-upgrade
   labels:
     app: back-end-service
     clusterName: {{ .Values.cluster.name | default "no-cluster-name"}}
