@@ -7,10 +7,6 @@ cluster: {}
 # values for individual service that been deployed 
 frontEnd:
   enabled: true
-  replicas: 2
-  logLevel: INFO
   
 backEnd:
   enabled: true
-  replicas: 3
-  logLevel: INFO
