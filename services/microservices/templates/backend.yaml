@@ -4,7 +4,7 @@ metadata:
   name: back-end-service
   namespace: backend 
   labels:
-    app: back-end-service
+    name: back-end-service
     clusterName: {{ .Values.cluster.name | default "no-cluster-name"}}
     region: {{ .Values.cluster.region | default "US-CENTRAL"}}
 spec:
@@ -23,8 +23,3 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
-        env:
-        - name: logLevel
-          values: {{ .Values.backEnd.logLevel }}
-        - name: storageAddress
-          values: {{ .Values.cluster.nfsAddress | default "127.0.0.1" }} 
