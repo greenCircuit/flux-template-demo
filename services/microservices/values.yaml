@@ -1,4 +1,8 @@
+# values from main.yaml
+
+# some global values 
 global: {}
+cluster: {}
 
 # values for individual service that been deployed 
 frontEnd:

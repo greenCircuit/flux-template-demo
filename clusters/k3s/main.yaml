@@ -23,6 +23,7 @@ spec:
       controlNodeIp: 192.10.10.10
       nfsAddress: 192.10.10.11
       region: US-WEST
+      name: localCluster
 
     # turning on and off services and providing values overrides
     testFramework:

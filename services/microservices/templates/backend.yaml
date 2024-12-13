@@ -5,8 +5,10 @@ metadata:
   namespace: backend 
   labels:
     app: testingFramework
+    clusterName: {{ .Values.cluster.name | default "no-cluster-name"}}
+    region: {{ .Values.cluster.region | default "US-WEST"}}
 spec:
-  replicas: 1
+  replicas: {{ .Values.backEnd.replicas }}
   selector:
     matchLabels:
       app: nginx
@@ -20,3 +22,8 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
+        env:
+        - name: logLevel
+          values: {{ .Values.backEnd.logLevel }}
+        - name: storageAddress
+          values: {{ .Values.cluster.nfsAddress | default "127.0.0.1" }} 
