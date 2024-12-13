@@ -5,7 +5,7 @@ cluster: {}
 
 # values how to run services
 testFramework:
-  enabled: false
+  enabled: true
   performanceTracker: 
     enabled: true
   testService:
@@ -13,4 +13,13 @@ testFramework:
 
 microservices:
   enabled: true
+  frontEnd:
+    enabled: true
+    replicas: 1
+    logLevel: DEBUG 
+    
+  backEnd:
+    enabled: true
+    replicas: 1
+    logLevel: DEBUG 
 

@@ -6,9 +6,3 @@ performanceTracker:
 
 testService:
   enabled: true
-  frontEnd:
-    enabled: true
-    replicas: 1
-  backEnd:
-    enabled: true
-    replicas: 1

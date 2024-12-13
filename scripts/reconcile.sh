@@ -5,3 +5,5 @@ flux resume ks flux-system -n flux-system
 
 # do helm releases reconcile
 flux reconcile hr cluster-definition -n flux-system
+flux suspend hr cluster-definition -n flux-system
+flux resume hr cluster-definition -n flux-system
