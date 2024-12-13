@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-performance 
-  namespace: flux-system 
+  name: front-end-service 
+  namespace: front-end 
   labels:
     app: nginx
 spec:
@@ -20,3 +20,4 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
+        

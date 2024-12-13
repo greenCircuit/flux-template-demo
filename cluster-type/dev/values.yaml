@@ -1,5 +1,9 @@
+# these values are passed by main.yaml
+# global values
 global: {}
+cluster: {}
 
+# values how to run services
 testFramework:
   enabled: false
   performanceTracker: 
@@ -7,6 +11,6 @@ testFramework:
   testService:
     enabled: true
 
-observability:
+microservices:
   enabled: true
 

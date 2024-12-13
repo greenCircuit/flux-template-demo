@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-framework
-  namespace: testing-framework 
+  name: back-end-service
+  namespace: end-end 
   labels:
     app: testingFramework
 spec:
