@@ -10,7 +10,7 @@ testFramework:
     enabled: true
   testService:
     enabled: true
-
+    
 microservices:
   enabled: true
   frontEnd:

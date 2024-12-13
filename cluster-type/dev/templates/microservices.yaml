@@ -20,4 +20,8 @@ spec:
     global:
       {{- .Values.global | toYaml | nindent 8 }}
 
+    cluster:
+      {{- .Values.cluster | toYaml | nindent 8 }}
+
+
 {{- end }}
