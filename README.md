@@ -26,3 +26,5 @@ use flux to deploy services
 - passing env vars to deployments from cluster type
 - turning on and off services at main.yaml level
 - change cluster type to show how it easy, and will change replicas for microservices deployments
+    - deployments replicas will change
+    - env vars for containers will change

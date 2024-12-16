@@ -1,4 +1,4 @@
-{{- if .Values.frontEnd.enabled }}
+{{- if .Values.microservices.frontEnd.enabled }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
