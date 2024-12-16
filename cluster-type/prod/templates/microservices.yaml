@@ -1,0 +1,36 @@
+{{- if .Values.microservices.enabled }}
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: microservices
+spec:
+  interval: 20s
+  chart:
+    spec:
+      reconcileStrategy: Revision
+      chart: ./services/microservices                        
+      sourceRef:
+        kind: GitRepository
+        namespace: flux-system
+        name: flux-system
+      interval: 20s
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+      
+  driftDetection:
+    mode: enabled
+
+  values:
+    microservices:
+      {{- .Values.microservices| toYaml | nindent 8 }}
+
+    global:
+      {{- .Values.global | toYaml | nindent 8 }}
+
+    cluster:
+      {{- .Values.cluster | toYaml | nindent 8 }}
+{{- end }}

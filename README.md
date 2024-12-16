@@ -21,9 +21,9 @@ use flux to deploy services
 - change deploy replicas count and reconcile and deployment back to what defined in gitrepo
 - change replicas cont in repo and reconcile and will recreate deployment with correct replicas defined in git repo
 - passing values to nested children. Added labels from main.yaml to deployments
+- passing env vars to deployments from cluster type
 
 # TODO
-- passing env vars to deployments from cluster type
 - turning on and off services at main.yaml level
 - change cluster type to show how it easy, and will change replicas for microservices deployments
     - deployments replicas will change

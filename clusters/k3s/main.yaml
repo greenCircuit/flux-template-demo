@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       reconcileStrategy: Revision
-      chart: ./cluster-type/dev
+      chart: ./cluster-type/prod
       sourceRef:
         kind: GitRepository
         namespace: flux-system

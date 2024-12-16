@@ -1,0 +1,24 @@
+# these values are passed by main.yaml
+# global values
+global: {}
+cluster: {}
+
+# values how to run services
+testFramework:
+  enabled: false
+  performanceTracker: 
+    enabled: true
+  testService:
+    enabled: true
+    
+microservices:
+  enabled: true
+  
+  frontEnd:
+    enabled: true
+    logLevel: INFO
+    
+  backEnd:
+    enabled: true
+    logLevel: INFO
+

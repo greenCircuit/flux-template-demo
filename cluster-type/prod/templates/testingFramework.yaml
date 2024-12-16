@@ -1,0 +1,26 @@
+{{- if .Values.testFramework.enabled }}
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: test-framework 
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: ./services/integration-testing
+      reconcileStrategy: Revision
+      sourceRef:
+        kind: GitRepository
+        namespace: flux-system
+        name: flux-system
+      interval: 10m
+  values:
+    global:
+      {{- .Values.global | toYaml | nindent 8 }}
+      
+    testFramework:
+      {{- .Values.testFramework | toYaml | nindent 8 }}
+      
+    cluster:
+      {{- .Values.cluster | toYaml | nindent 8 }}
+{{- end }}
