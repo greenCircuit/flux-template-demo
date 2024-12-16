@@ -7,6 +7,7 @@ spec:
   interval: 20s
   chart:
     spec:
+      reconcileStrategy: Revision
       chart: ./cluster-type/dev
       sourceRef:
         kind: GitRepository

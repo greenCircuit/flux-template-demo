@@ -12,3 +12,9 @@ flux reconcile hr microservices -n flux-system
 flux suspend hr microservices -n flux-system
 sleep 2
 flux resume hr microservices -n flux-system
+
+flux suspend kustomization --all
+flux resume kustomization --all
+
+flux suspend hr --all
+flux resume hr --all

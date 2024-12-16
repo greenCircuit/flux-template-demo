@@ -6,6 +6,7 @@ spec:
   interval: 20s
   chart:
     spec:
+      reconcileStrategy: Revision
       chart: ./services/microservices                        
       sourceRef:
         kind: GitRepository
