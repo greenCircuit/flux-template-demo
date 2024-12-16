@@ -14,7 +14,7 @@ testFramework:
 microservices:
   frontEnd:
     enabled: true
-    replicas: 2
+    replicas: 1
     logLevel: DEBUG 
     
   backEnd:
