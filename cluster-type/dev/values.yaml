@@ -14,11 +14,11 @@ testFramework:
 microservices:
   frontEnd:
     enabled: true
-    replicas: 2
+    replicas: 1
     logLevel: DEBUG 
     
   backEnd:
     enabled: true
-    replicas: 3
+    replicas: 1
     logLevel: DEBUG 
 
